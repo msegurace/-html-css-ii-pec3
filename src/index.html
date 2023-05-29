@@ -1,27 +1,67 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
-      <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
-      </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
-    <include src="./views/footer.html"></include>
-    <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.css">
+  <title>PEC 2 - Moisés Segura Cedrés</title>
+  <style>
+    .container {
+      max-width: 1000px;
+    }
+  </style>
+</head>
+
+<body class="flex bg-yellow-50 items-center justify-center min-h-screen">
+  <div>
+    <include src="./views/header.html"></include>
+    <main class="container">
+      <section class="grid gap-4 grid-cols-6 grid-rows-3 grid-flow-row place-content-center">
+        <h1 class="row-start-1 col-span-4 text-3xl font-bold underline">Club de ajedrez Gran Canaria</h1>
+        <div class="row-start-2 col-start-1 col-span-4 text-base text-justify">
+          <p>Bienvenido al sitio web del Club de Ajedrez Gran Canaria. Nuestro club ha estado en funcionamiento desde
+            hace
+            más de 10 años, y nos enorgullecemos de ser un de los club de ajedrez muy activo y exitoso. En
+            esta página, compartiremos algunas fotos y detalles sobre nuestro club, ¡así que sigue leyendo para conocer
+            más!
+          </p>
+        </div>
+        <div class="row-start-3 col-start-1 col-span-4 text-base text-justify">
+          <p>En primer lugar, es importante mencionar que nuestro club está compuesto por jugadores de todas las edades
+            y
+            habilidades. Desde jóvenes principiantes hasta jugadores experimentados, todos son bienvenidos a unirse a
+            nuestro club. Ofrecemos una variedad de actividades y eventos durante todo el año, incluyendo torneos
+            internos,
+            partidas amistosas, clases y más.</p>
+        </div>
+        <div class="row-start-1 row-span-3 col-start-5 col-span-2 place-items-center">
+          <picture>
+            <source media="(max-width: 600px)" srcset="./assets/images/portada.png?as=webp&width=350"
+              type="image/webp" />
+            <source media="(min-width: 481px) and (max-width: 830px)"
+              srcset="./assets/images/portada.png?as=webp&width=350" type="image/webp" />
+            <img src="./assets/images/portada.png" loading="lazy" alt="Tablero de ajedrez 3D" width="350px" />
+          </picture>
+        </div>
+        <div class="row-start-4 mt-10 col-start-4 text-base text-right">
+          <a href="#">
+            <i class="fa-solid fa-chess-board"></i> Sede</a>
+        </div>
+        <div class="row-start-4 mt-10 col-start-5 text-base text-right">
+          <a href="#">
+            <i class="fa-solid fa-chess-king"></i> Campeonatos</a>
+        </div>
+        <div class="row-start-4 col-start-6 mt-10 text-base text-right">
+          <a href="#">
+            <i class="fa-solid fa-light fa-chess-knight"></i> Únete</a>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+</body>
+
 </html>
