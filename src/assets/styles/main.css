@@ -4,3 +4,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .link-menu {
+    @apply m-0 relative top-1/2 bg-white text-texto-fondo-oscuro border-solid border-2 border-color-fondo-boton text-right p-3 hover:bg-color-fondo-boton hover:text-white;
+  }
+
+  .link-activities {
+    @apply w-32 bg-color-contraste text-color-texto text-center border-solid border-2 border-color-fondo-boton p-3 hover:bg-color-fondo-boton hover:text-white;
+  }
+
+  .member-card {
+    @apply flex flex-col w-screen w-full justify-center items-center pb-10 max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg;
+  }
+}

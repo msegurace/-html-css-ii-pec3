@@ -14,3 +14,5 @@
   const university = "UOC";
   console.log(`Hello, ${university}!`);
 } )();
+
+import * as fontawesome from '@fortawesome/fontawesome-free/css/all.css'

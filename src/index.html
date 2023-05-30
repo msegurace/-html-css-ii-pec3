@@ -14,13 +14,15 @@
   </style>
 </head>
 
-<body class="flex bg-yellow-50 items-center justify-center min-h-screen">
+<body class="flex bg-yellow-50 text-center items-center justify-center min-h-screen">
   <div>
     <include src="./views/header.html"></include>
     <main class="container">
-      <section class="grid gap-4 grid-cols-6 grid-rows-3 grid-flow-row place-content-center">
-        <h1 class="row-start-1 col-span-4 text-3xl font-bold underline">Club de ajedrez Gran Canaria</h1>
-        <div class="row-start-2 col-start-1 col-span-4 text-base text-justify">
+      <section
+        class="m-3 grid gap-4 grid-cols-3 tablet:grid-cols-6 desktop:grid-cols-6 tablet:grid-rows-3 desktop:grid-rows-3 grid-flow-row place-content-center">
+        <h1 class="row-start-1 text-color-fondo-boton col-span-4 text-3xl font-bold uppercase">Club de ajedrez Gran
+          Canaria</h1>
+        <div class="row-start-2 col-start-1 col-span-3 text-base text-justify">
           <p>Bienvenido al sitio web del Club de Ajedrez Gran Canaria. Nuestro club ha estado en funcionamiento desde
             hace
             más de 10 años, y nos enorgullecemos de ser un de los club de ajedrez muy activo y exitoso. En
@@ -28,7 +30,7 @@
             más!
           </p>
         </div>
-        <div class="row-start-3 col-start-1 col-span-4 text-base text-justify">
+        <div class="row-start-3 col-start-1 col-span-3 text-base text-justify">
           <p>En primer lugar, es importante mencionar que nuestro club está compuesto por jugadores de todas las edades
             y
             habilidades. Desde jóvenes principiantes hasta jugadores experimentados, todos son bienvenidos a unirse a
@@ -36,29 +38,23 @@
             internos,
             partidas amistosas, clases y más.</p>
         </div>
-        <div class="row-start-1 row-span-3 col-start-5 col-span-2 place-items-center">
-          <picture>
-            <source media="(max-width: 600px)" srcset="./assets/images/portada.png?as=webp&width=350"
-              type="image/webp" />
-            <source media="(min-width: 481px) and (max-width: 830px)"
-              srcset="./assets/images/portada.png?as=webp&width=350" type="image/webp" />
-            <img src="./assets/images/portada.png" loading="lazy" alt="Tablero de ajedrez 3D" width="350px" />
-          </picture>
+        <div
+          class="flex flex-col  justify-center items-center row-start-4 col-start-1 col-span-3 justifiy-center text-center tablet:row-start-1 tablet:row-span-3 desktop:row-start-1 desktop:row-span-3  tablet:col-start-5 dektop:col-start-5 tablet:col-span-2 desktop:col-span-2 dektop:flex-row tablet:flex-row">
+          <img class="w-9/12 tablet:w-80 desktop:w-80" src="./assets/images/portada.png" loading="lazy"
+            alt="Tablero de ajedrez 3D" />
         </div>
-        <div class="row-start-4 mt-10 col-start-4 text-base text-right">
-          <a href="#">
-            <i class="fa-solid fa-chess-board"></i> Sede</a>
-        </div>
-        <div class="row-start-4 mt-10 col-start-5 text-base text-right">
-          <a href="#">
-            <i class="fa-solid fa-chess-king"></i> Campeonatos</a>
-        </div>
-        <div class="row-start-4 col-start-6 mt-10 text-base text-right">
-          <a href="#">
-            <i class="fa-solid fa-light fa-chess-knight"></i> Únete</a>
-        </div>
+        <include src="./views/link-activity.html"
+          locals='{"text": "Sede", "col": "col-start-1", "dcol": "col-start-4", "icon": "fa-chess-board" }'>
+        </include>
+        <include src="./views/link-activity.html"
+          locals='{"text": "Campeonatos", "col": "col-start-2", "dcol": "col-start-5", "icon": "fa-chess-king"}'>
+        </include>
+        <include src="./views/link-activity.html"
+          locals='{"text": "Únete", "col": "col-start-3", "dcol": "col-start-6", "icon": "fa-chess-knight" }'></include>
+
       </section>
     </main>
+    <include src="./views/footer.html"></include>
   </div>
 
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->

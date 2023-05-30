@@ -6,89 +6,40 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="./assets/styles/main.css">
-  <title>PEC 2 - Moisés Segura Cedrés</title>
+  <title>PEC 3 - Moisés Segura Cedrés</title>
+
 </head>
 
-<body>
-  <div id="app">
+<body class="flex bg-yellow-50 text-center items-center justify-center min-h-screen">
+  <div class="container">
     <include src="./views/header.html"></include>
-    <div class="member-page-container">
-      <h1>Miembros del club</h1>
-      <div class="member-container">
-        <div class="member-card">
-          <img src="./assets/images/member1.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 1</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="member-card">
-          <img src="./assets/images/member2.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 2</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="member-card">
-          <img src="./assets/images/member3.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 3</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="member-card">
-          <img src="./assets/images/member4.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 4</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="member-card">
-          <img src="./assets/images/member5.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 5</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="member-card">
-          <img src="./assets/images/member6.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 6</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="member-card">
-          <img src="./assets/images/member7.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 7</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="member-card">
-          <img src="./assets/images/member8.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 8</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="member-card">
-          <img src="./assets/images/member9.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 9</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="member-card">
-          <img src="./assets/images/member10.png" loading="lazy" alt="Imagen de miembro del club" width="150px" />
-          <p class="member-name">Miembro 10</p>
-          <p class="member-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt
-            ut labore et dolore magna aliqua.</p>
-        </div>
-      </div>
-    </div>
+    <div class="justify-center text-center">
+      <h1 class="row-start-1 text-color-fondo-boton col-span-4 text-3xl font-bold uppercase">Miembros del club</h1>
+      <div
+        class="flex gap-4 flex-col tablet:flex-row desktop:flex-row flex-wrap items-center h-auto max-w-full rounded-lg justify-center text-center">
 
-  </div>
+        <include src="./views/member-card.html" locals='{"text": "Member 1", "image": "./assets/images/member1.png"}'>
+        </include>
+        <include src="./views/member-card.html" locals='{"text": "Member 2", "image": "./assets/images/member2.png"}'>
+        </include>
+        <include src="./views/member-card.html" locals='{"text": "Member 3", "image": "./assets/images/member3.png"}'>
+        </include>
+        <include src="./views/member-card.html" locals='{"text": "Member 4", "image": "./assets/images/member4.png"}'>
+        </include>
+        <include src="./views/member-card.html" locals='{"text": "Member 5", "image": "./assets/images/member5.png"}'>
+        </include>
+        <include src="./views/member-card.html" locals='{"text": "Member 6", "image": "./assets/images/member6.png"}'>
+        </include>
+        <include src="./views/member-card.html" locals='{"text": "Member 7", "image": "./assets/images/member7.png"}'>
+        </include>
+        <include src="./views/member-card.html" locals='{"text": "Member 8", "image": "./assets/images/member8.png"}'>
+        </include>
+        <include src="./views/member-card.html" locals='{"text": "Member 9", "image": "./assets/images/member9.png"}'>
+        </include>
+        <include src="./views/member-card.html" locals='{"text": "Member 10", "image": "./assets/images/member10.png"}'>
+        </include>
+      </div>
+      <include src="./views/footer.html"></include>
 </body>
 
 </html>
